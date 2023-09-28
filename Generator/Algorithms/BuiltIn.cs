@@ -3,7 +3,7 @@
 namespace Generator.Algorithms
 {
     /// <summary>
-    /// Built-in <see cref="Random"/> class.
+    /// Represents a built-in <see cref="Random"/> class.
     /// </summary>
     public class BuiltIn : IRandomable
     {
