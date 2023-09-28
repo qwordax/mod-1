@@ -14,7 +14,7 @@ Write a C# application for modeling pseudorandom number generators using
 3. Generator based on the linear feedback shift register.
 
 Select the parameters for the generators in order to get the best results
-for each generator (for samples $N = 10\,000, 500\,000, 100\,000\,000$).
+for each generator (for samples $N = 10\ 000, 500\ 000, 100\ 000\ 000$).
 
 Output the histogram, expectation, variation and results of the № 1–8 NIST
 tests for the best case.
