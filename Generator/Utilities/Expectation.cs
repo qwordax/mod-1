@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Generator.Utility
+namespace Generator.Utilities
 {
     /// <summary>
-    /// Representing a class of computing the variation.
+    /// Represents a class of computing the expectation.
     /// </summary>
-    public static class Variation
+    public static class Expectation
     {
         public static Double Compute(List<UInt64> values)
         {
             Double result = 0.0;
 
-            Double expect = Expectation.Compute(values);
-
             foreach (UInt64 value in values)
             {
-                result += (value - expect) * (value - expect);
+                result += value;
             }
 
             return result / values.Count;
