@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Generator.Utilities
 {
     /// <summary>
-    /// Representing a class of computing the variation.
+    /// Represents a class of computing variation.
     /// </summary>
     public static class Variation
     {

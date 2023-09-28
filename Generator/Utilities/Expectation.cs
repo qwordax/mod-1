@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Generator.Utilities
 {
     /// <summary>
-    /// Represents a class of computing the expectation.
+    /// Represents a class of computing expectation.
     /// </summary>
     public static class Expectation
     {
