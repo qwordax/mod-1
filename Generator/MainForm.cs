@@ -29,11 +29,6 @@ namespace Generator
             UInt64 n = (UInt64)upDown1.Value;
             UInt64 m = (UInt64)upDown2.Value;
 
-            if (radioButton1.Checked)
-            {
-                generator = new BuiltIn();
-            }
-
             if (radioButton2.Checked)
             {
                 generator = new Lehmer(123, 123, 123);
@@ -54,11 +49,29 @@ namespace Generator
                 values.Add(generator.Next());
             }
 
-            textBox1.Text = Expectation.Compute(values).ToString();
+            Double expect = Expectation.Compute(values);
+
+            textBox1.Text = String.Format("{0:e}", expect);
             textBox1.Update();
 
-            textBox2.Text = Variation.Compute(values).ToString();
+            Double variate = Variation.Compute(values);
+
+            textBox2.Text = String.Format("{0:e}", variate);
             textBox2.Update();
+
+            statusLabel.Text = "Testing...";
+            statusStrip.Update();
+
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+
+            testBox.Update();
 
             statusLabel.Text = "Done!";
         }
@@ -67,6 +80,15 @@ namespace Generator
         {
             textBox1.Text = "";
             textBox2.Text = "";
+
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
 
             statusLabel.Text = "";
         }
