@@ -17,34 +17,6 @@ namespace Generator
             InitializeComponent();
         }
 
-        private void ClearTextBoxes()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-
-            parameterBox.Update();
-        }
-
-        private void ClearCheckBoxes()
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
-            checkBox7.Checked = false;
-            checkBox8.Checked = false;
-
-            testBox.Update();
-        }
-
-        private void ClearStatusLabel()
-        {
-            statusLabel.Text = "";
-            statusStrip.Update();
-        }
-
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
             statusLabel.Text = "Generating...";
@@ -85,19 +57,33 @@ namespace Generator
 
             parameterBox.Update();
 
-            statusLabel.Text = "Testing...";
-            statusStrip.Update();
-
-            ClearCheckBoxes();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox3.Checked = true;
+            checkBox4.Checked = true;
+            checkBox5.Checked = true;
+            checkBox6.Checked = true;
+            checkBox7.Checked = true;
+            checkBox8.Checked = true;
 
             statusLabel.Text = "Done!";
         }
 
         private void ClearButtonClick(Object sender, EventArgs args)
         {
-            ClearTextBoxes();
-            ClearCheckBoxes();
-            ClearStatusLabel();
+            textBox1.Text = "";
+            textBox2.Text = "";
+
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+
+            statusLabel.Text = "";
         }
     }
 }
