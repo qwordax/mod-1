@@ -24,6 +24,9 @@ namespace Generator
         private Label label3;
         private Label label4;
 
+        private NumericUpDown upDown1;
+        private NumericUpDown upDown2;
+
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private RadioButton radioButton3;
@@ -58,6 +61,9 @@ namespace Generator
             label3 = new Label();
             label4 = new Label();
 
+            upDown1 = new NumericUpDown();
+            upDown2 = new NumericUpDown();
+
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -83,12 +89,14 @@ namespace Generator
             //
             // parameterBox.
             //
-            parameterBox.Controls.AddRange(new Label[]
+            parameterBox.Controls.AddRange(new Control[]
             {
                 label1,
                 label2,
                 label3,
-                label4
+                label4,
+                upDown1,
+                upDown2
             });
 
             parameterBox.Location = new Point(5, 5);
@@ -226,6 +234,28 @@ namespace Generator
             label4.Size = new Size(100, 30);
             label4.Text = "V";
             label4.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // upDown1.
+            //
+            upDown1.Location = new Point(110, 25);
+            upDown1.Maximum = 100_000_000;
+            upDown1.Minimum = 1;
+            upDown1.Name = "upDown1";
+            upDown1.Size = new Size(185, 30);
+
+            upDown1.Value = 10_000;
+
+            //
+            // upDown2.
+            //
+            upDown2.Location = new Point(110, 60);
+            upDown2.Maximum = 1_000;
+            upDown2.Minimum = 1;
+            upDown2.Name = "upDown2";
+            upDown2.Size = new Size(185, 30);
+
+            upDown2.Value = 100;
 
             //
             // radioButton1.
