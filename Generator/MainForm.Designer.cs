@@ -80,6 +80,9 @@ namespace Generator
 
             SuspendLayout();
 
+            //
+            // parameterBox.
+            //
             parameterBox.Controls.AddRange(new Label[]
             {
                 label1,
@@ -95,6 +98,9 @@ namespace Generator
             parameterBox.TabIndex = 0;
             parameterBox.Text = "Parameters";
 
+            //
+            // generatorBox.
+            //
             generatorBox.Controls.AddRange(new RadioButton[]
             {
                 radioButton1,
@@ -110,6 +116,9 @@ namespace Generator
             generatorBox.TabIndex = 1;
             generatorBox.Text = "Generators";
 
+            //
+            // testBox.
+            //
             testBox.Controls.AddRange(new CheckBox[]
             {
                 checkBox1,
@@ -130,6 +139,9 @@ namespace Generator
             testBox.TabStop = false;
             testBox.Text = "Tests";
 
+            //
+            // chart.
+            //
             chart.Location = new Point(310, 15);
             chart.Margin = new Padding(0, 0, 0, 0);
             chart.Name = "chart";
@@ -137,6 +149,9 @@ namespace Generator
             chart.TabIndex = 0;
             chart.TabStop = false;
 
+            //
+            // generateButton.
+            //
             generateButton.Click += GenerateButtonClick;
             generateButton.Location = new Point(310, 535);
             generateButton.Margin = new Padding(0, 0, 0, 0);
@@ -145,6 +160,9 @@ namespace Generator
             generateButton.TabIndex = 4;
             generateButton.Text = "Generate";
 
+            //
+            // clearButton.
+            //
             clearButton.Click += ClearButtonClick;
             clearButton.Location = new Point(755, 535);
             clearButton.Margin = new Padding(0, 0, 0, 0);
@@ -153,16 +171,25 @@ namespace Generator
             clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
 
+            //
+            // statusStrip.
+            //
             statusStrip.Items.Add(statusLabel);
             statusStrip.Name = "statusStrip";
             statusStrip.SizingGrip = false;
             statusStrip.TabIndex = 0;
             statusStrip.TabStop = false;
 
+            //
+            // statusLabel.
+            //
             statusLabel.Alignment = ToolStripItemAlignment.Left;
             statusLabel.Name = "toolStripStatusLabel";
             statusLabel.Text = "";
 
+            //
+            // label1.
+            //
             label1.Font = new Font(label1.Font, FontStyle.Italic);
             label1.Location = new Point(5, 25);
             label1.Name = "label1";
@@ -170,6 +197,9 @@ namespace Generator
             label1.Text = "N";
             label1.TextAlign = ContentAlignment.MiddleLeft;
 
+            //
+            // label2.
+            //
             label2.Font = new Font(label2.Font, FontStyle.Italic);
             label2.Location = new Point(5, 60);
             label2.Name = "label2";
@@ -177,6 +207,9 @@ namespace Generator
             label2.Text = "M";
             label2.TextAlign = ContentAlignment.MiddleLeft;
 
+            //
+            // label3.
+            //
             label3.Font = new Font(label3.Font, FontStyle.Italic);
             label3.Location = new Point(5, 160);
             label3.Name = "label3";
@@ -184,6 +217,9 @@ namespace Generator
             label3.Text = "E";
             label3.TextAlign = ContentAlignment.MiddleLeft;
 
+            //
+            // label4.
+            //
             label4.Font = new Font(label4.Font, FontStyle.Italic);
             label4.Location = new Point(5, 195);
             label4.Name = "label4";
@@ -191,6 +227,9 @@ namespace Generator
             label4.Text = "V";
             label4.TextAlign = ContentAlignment.MiddleLeft;
 
+            //
+            // radioButton1.
+            //
             radioButton1.Checked = true;
             radioButton1.Font = new Font("Courier New",
                 9,
@@ -202,6 +241,9 @@ namespace Generator
             radioButton1.TabIndex = 3;
             radioButton1.Text = "BuiltIn";
 
+            //
+            // radioButton2.
+            //
             radioButton2.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
@@ -212,6 +254,9 @@ namespace Generator
             radioButton2.TabIndex = 3;
             radioButton2.Text = "Lehmer";
 
+            //
+            // radioButton3.
+            //
             radioButton3.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
@@ -222,6 +267,9 @@ namespace Generator
             radioButton3.TabIndex = 3;
             radioButton3.Text = "MPM";
 
+            //
+            // radioButton4.
+            //
             radioButton4.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
@@ -232,6 +280,9 @@ namespace Generator
             radioButton4.TabIndex = 3;
             radioButton4.Text = "LFSR";
 
+            //
+            // checkBox1.
+            //
             checkBox1.AutoCheck = false;
             checkBox1.Location = new Point(5, 25);
             checkBox1.Name = "checkBox1";
@@ -240,6 +291,9 @@ namespace Generator
             checkBox1.TabStop = false;
             checkBox1.Text = "№ 1";
 
+            //
+            // checkBox2.
+            //
             checkBox2.AutoCheck = false;
             checkBox2.Location = new Point(70, 25);
             checkBox2.Name = "checkBox2";
@@ -248,6 +302,9 @@ namespace Generator
             checkBox2.TabStop = false;
             checkBox2.Text = "№ 2";
 
+            //
+            // checkBox3.
+            //
             checkBox3.AutoCheck = false;
             checkBox3.Location = new Point(135, 25);
             checkBox3.Name = "checkBox3";
@@ -256,6 +313,9 @@ namespace Generator
             checkBox3.TabStop = false;
             checkBox3.Text = "№ 3";
 
+            //
+            // checkBox4.
+            //
             checkBox4.AutoCheck = false;
             checkBox4.Location = new Point(200, 25);
             checkBox4.Name = "checkBox4";
@@ -264,6 +324,9 @@ namespace Generator
             checkBox4.TabStop = false;
             checkBox4.Text = "№ 4";
 
+            //
+            // checkBox5.
+            //
             checkBox5.AutoCheck = false;
             checkBox5.Location = new Point(5, 60);
             checkBox5.Name = "checkBox5";
@@ -272,6 +335,9 @@ namespace Generator
             checkBox5.TabStop = false;
             checkBox5.Text = "№ 5";
 
+            //
+            // checkBox6.
+            //
             checkBox6.AutoCheck = false;
             checkBox6.Location = new Point(70, 60);
             checkBox6.Name = "checkBox6";
@@ -280,6 +346,9 @@ namespace Generator
             checkBox6.TabStop = false;
             checkBox6.Text = "№ 6";
 
+            //
+            // checkBox7.
+            //
             checkBox7.AutoCheck = false;
             checkBox7.Location = new Point(135, 60);
             checkBox7.Name = "checkBox7";
@@ -288,6 +357,9 @@ namespace Generator
             checkBox7.TabStop = false;
             checkBox7.Text = "№ 7";
 
+            //
+            // checkBox8.
+            //
             checkBox8.AutoCheck = false;
             checkBox8.Location = new Point(200, 60);
             checkBox8.Name = "checkBox8";
@@ -296,6 +368,9 @@ namespace Generator
             checkBox8.TabStop = false;
             checkBox8.Text = "№ 8";
 
+            //
+            // MainForm.
+            //
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 600);
             FormBorderStyle = FormBorderStyle.FixedSingle;
