@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 
 namespace Generator
@@ -10,6 +11,11 @@ namespace Generator
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void GenerateButtonClick(Object sender, EventArgs args)
+        {
+
         }
     }
 }

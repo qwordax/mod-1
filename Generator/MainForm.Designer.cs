@@ -9,6 +9,8 @@ namespace Generator
         private GroupBox generatorBox;
         private GroupBox testBox;
 
+        private Button generateButton;
+
         private StatusStrip statusStrip;
 
         private ToolStripStatusLabel statusLabel;
@@ -18,6 +20,8 @@ namespace Generator
             parameterBox = new GroupBox();
             generatorBox = new GroupBox();
             testBox = new GroupBox();
+
+            generateButton = new Button();
 
             statusStrip = new StatusStrip();
 
@@ -55,10 +59,18 @@ namespace Generator
             testBox.TabStop = false;
             testBox.Text = "Tests";
 
+            generateButton.Click += GenerateButtonClick;
+            generateButton.Location = new Point(400, 100);
+            generateButton.Margin = new Padding(0, 0, 0, 0);
+            generateButton.Name = "generateButton";
+            generateButton.Size = new Size(100, 30);
+            generateButton.TabIndex = 3;
+            generateButton.Text = "Generate";
+
             statusStrip.Items.Add(statusLabel);
             statusStrip.Name = "statusStrip";
             statusStrip.SizingGrip = false;
-            statusStrip.TabIndex = 3;
+            statusStrip.TabIndex = 4;
             statusStrip.TabStop = false;
 
             statusLabel.Alignment = ToolStripItemAlignment.Left;
@@ -75,6 +87,8 @@ namespace Generator
             Controls.Add(parameterBox);
             Controls.Add(generatorBox);
             Controls.Add(testBox);
+
+            Controls.Add(generateButton);
 
             Controls.Add(statusStrip);
 
