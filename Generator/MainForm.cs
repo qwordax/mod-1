@@ -17,6 +17,34 @@ namespace Generator
             InitializeComponent();
         }
 
+        private void ClearTextBoxes()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+
+            parameterBox.Update();
+        }
+
+        private void ClearCheckBoxes()
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+
+            testBox.Update();
+        }
+
+        private void ClearStatusLabel()
+        {
+            statusLabel.Text = "";
+            statusStrip.Update();
+        }
+
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
             statusLabel.Text = "Generating...";
@@ -50,47 +78,26 @@ namespace Generator
             }
 
             Double expect = Expectation.Compute(values);
-
-            textBox1.Text = String.Format("{0:e}", expect);
-            textBox1.Update();
-
             Double variate = Variation.Compute(values);
 
+            textBox1.Text = String.Format("{0:e}", expect);
             textBox2.Text = String.Format("{0:e}", variate);
-            textBox2.Update();
+
+            parameterBox.Update();
 
             statusLabel.Text = "Testing...";
             statusStrip.Update();
 
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
-            checkBox7.Checked = false;
-            checkBox8.Checked = false;
-
-            testBox.Update();
+            ClearCheckBoxes();
 
             statusLabel.Text = "Done!";
         }
 
         private void ClearButtonClick(Object sender, EventArgs args)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
-            checkBox7.Checked = false;
-            checkBox8.Checked = false;
-
-            statusLabel.Text = "";
+            ClearTextBoxes();
+            ClearCheckBoxes();
+            ClearStatusLabel();
         }
     }
 }
