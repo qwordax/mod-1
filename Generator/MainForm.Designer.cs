@@ -9,15 +9,25 @@ namespace Generator
         private GroupBox generatorBox;
         private GroupBox testBox;
 
+        private StatusStrip statusStrip;
+
+        private ToolStripStatusLabel statusLabel;
+
         private void InitializeComponent()
         {
             parameterBox = new GroupBox();
             generatorBox = new GroupBox();
             testBox = new GroupBox();
 
+            statusStrip = new StatusStrip();
+
+            statusLabel = new ToolStripStatusLabel();
+
             parameterBox.SuspendLayout();
             generatorBox.SuspendLayout();
             testBox.SuspendLayout();
+
+            statusStrip.SuspendLayout();
 
             SuspendLayout();
 
@@ -45,6 +55,16 @@ namespace Generator
             testBox.TabStop = false;
             testBox.Text = "Tests";
 
+            statusStrip.Items.Add(statusLabel);
+            statusStrip.Name = "statusStrip";
+            statusStrip.SizingGrip = false;
+            statusStrip.TabIndex = 3;
+            statusStrip.TabStop = false;
+
+            statusLabel.Alignment = ToolStripItemAlignment.Left;
+            statusLabel.Name = "toolStripStatusLabel";
+            statusLabel.Text = "";
+
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -56,11 +76,15 @@ namespace Generator
             Controls.Add(generatorBox);
             Controls.Add(testBox);
 
+            Controls.Add(statusStrip);
+
             parameterBox.ResumeLayout(true);
             generatorBox.ResumeLayout(true);
             testBox.ResumeLayout(true);
 
-            ResumeLayout(false);
+            statusStrip.ResumeLayout(true);
+
+            ResumeLayout(true);
         }
     }
 }
