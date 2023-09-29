@@ -27,6 +27,9 @@ namespace Generator
         private NumericUpDown upDown1;
         private NumericUpDown upDown2;
 
+        private TextBox textBox1;
+        private TextBox textBox2;
+
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private RadioButton radioButton3;
@@ -64,6 +67,9 @@ namespace Generator
             upDown1 = new NumericUpDown();
             upDown2 = new NumericUpDown();
 
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -96,7 +102,9 @@ namespace Generator
                 label3,
                 label4,
                 upDown1,
-                upDown2
+                upDown2,
+                textBox1,
+                textBox2
             });
 
             parameterBox.Location = new Point(5, 5);
@@ -201,7 +209,7 @@ namespace Generator
             label1.Font = new Font(label1.Font, FontStyle.Italic);
             label1.Location = new Point(5, 25);
             label1.Name = "label1";
-            label1.Size = new Size(100, 30);
+            label1.Size = new Size(60, 30);
             label1.Text = "N";
             label1.TextAlign = ContentAlignment.MiddleLeft;
 
@@ -211,7 +219,7 @@ namespace Generator
             label2.Font = new Font(label2.Font, FontStyle.Italic);
             label2.Location = new Point(5, 60);
             label2.Name = "label2";
-            label2.Size = new Size(100, 30);
+            label2.Size = new Size(60, 30);
             label2.Text = "M";
             label2.TextAlign = ContentAlignment.MiddleLeft;
 
@@ -221,7 +229,7 @@ namespace Generator
             label3.Font = new Font(label3.Font, FontStyle.Italic);
             label3.Location = new Point(5, 160);
             label3.Name = "label3";
-            label3.Size = new Size(100, 30);
+            label3.Size = new Size(60, 30);
             label3.Text = "E";
             label3.TextAlign = ContentAlignment.MiddleLeft;
 
@@ -231,31 +239,49 @@ namespace Generator
             label4.Font = new Font(label4.Font, FontStyle.Italic);
             label4.Location = new Point(5, 195);
             label4.Name = "label4";
-            label4.Size = new Size(100, 30);
+            label4.Size = new Size(60, 30);
             label4.Text = "V";
             label4.TextAlign = ContentAlignment.MiddleLeft;
 
             //
             // upDown1.
             //
-            upDown1.Location = new Point(110, 25);
+            upDown1.Location = new Point(70, 25);
             upDown1.Maximum = 100_000_000;
             upDown1.Minimum = 1;
             upDown1.Name = "upDown1";
-            upDown1.Size = new Size(185, 30);
+            upDown1.Size = new Size(225, 30);
 
             upDown1.Value = 10_000;
 
             //
             // upDown2.
             //
-            upDown2.Location = new Point(110, 60);
+            upDown2.Location = new Point(70, 60);
             upDown2.Maximum = 1_000;
             upDown2.Minimum = 1;
             upDown2.Name = "upDown2";
-            upDown2.Size = new Size(185, 30);
+            upDown2.Size = new Size(225, 30);
 
             upDown2.Value = 100;
+
+            //
+            // textBox1.
+            //
+            textBox1.Location = new Point(70, 160);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(225, 30);
+            textBox1.TabStop = false;
+
+            //
+            // textBox2.
+            //
+            textBox2.Location = new Point(70, 195);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(225, 30);
+            textBox2.TabStop = false;
 
             //
             // radioButton1.
