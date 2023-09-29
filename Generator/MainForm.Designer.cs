@@ -19,6 +19,11 @@ namespace Generator
 
         private ToolStripStatusLabel statusLabel;
 
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private RadioButton radioButton3;
@@ -48,6 +53,11 @@ namespace Generator
 
             statusLabel = new ToolStripStatusLabel();
 
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -69,6 +79,14 @@ namespace Generator
             statusStrip.SuspendLayout();
 
             SuspendLayout();
+
+            parameterBox.Controls.AddRange(new Label[]
+            {
+                label1,
+                label2,
+                label3,
+                label4
+            });
 
             parameterBox.Location = new Point(5, 5);
             parameterBox.Margin = new Padding(0, 0, 0, 0);
@@ -144,6 +162,34 @@ namespace Generator
             statusLabel.Alignment = ToolStripItemAlignment.Left;
             statusLabel.Name = "toolStripStatusLabel";
             statusLabel.Text = "";
+
+            label1.Font = new Font(label1.Font, FontStyle.Italic);
+            label1.Location = new Point(5, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 30);
+            label1.Text = "N";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+
+            label2.Font = new Font(label2.Font, FontStyle.Italic);
+            label2.Location = new Point(5, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(100, 30);
+            label2.Text = "M";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+
+            label3.Font = new Font(label3.Font, FontStyle.Italic);
+            label3.Location = new Point(5, 160);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 30);
+            label3.Text = "E";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+
+            label4.Font = new Font(label4.Font, FontStyle.Italic);
+            label4.Location = new Point(5, 195);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 30);
+            label4.Text = "V";
+            label4.TextAlign = ContentAlignment.MiddleLeft;
 
             radioButton1.Checked = true;
             radioButton1.Font = new Font("Courier New",
