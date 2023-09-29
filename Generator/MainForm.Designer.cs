@@ -1,5 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Generator
 {
@@ -8,6 +10,8 @@ namespace Generator
         private GroupBox parameterBox;
         private GroupBox generatorBox;
         private GroupBox testBox;
+
+        private Chart chart;
 
         private Button generateButton;
         private Button clearButton;
@@ -35,6 +39,8 @@ namespace Generator
             parameterBox = new GroupBox();
             generatorBox = new GroupBox();
             testBox = new GroupBox();
+
+            chart = new Chart();
 
             generateButton = new Button();
             clearButton = new Button();
@@ -106,6 +112,13 @@ namespace Generator
             testBox.TabIndex = 3;
             testBox.TabStop = false;
             testBox.Text = "Tests";
+
+            chart.Location = new Point(310, 15);
+            chart.Margin = new Padding(0, 0, 0, 0);
+            chart.Name = "chart";
+            chart.Size = new Size(885, 515);
+            chart.TabIndex = 0;
+            chart.TabStop = false;
 
             generateButton.Click += GenerateButtonClick;
             generateButton.Location = new Point(310, 535);
@@ -248,6 +261,8 @@ namespace Generator
             Controls.Add(parameterBox);
             Controls.Add(generatorBox);
             Controls.Add(testBox);
+
+            Controls.Add(chart);
 
             Controls.Add(generateButton);
             Controls.Add(clearButton);
