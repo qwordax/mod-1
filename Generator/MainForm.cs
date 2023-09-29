@@ -17,5 +17,10 @@ namespace Generator
         {
 
         }
+
+        private void ClearButtonClick(Object sender, EventArgs args)
+        {
+
+        }
     }
 }

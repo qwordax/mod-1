@@ -10,6 +10,7 @@ namespace Generator
         private GroupBox testBox;
 
         private Button generateButton;
+        private Button clearButton;
 
         private StatusStrip statusStrip;
 
@@ -22,6 +23,7 @@ namespace Generator
             testBox = new GroupBox();
 
             generateButton = new Button();
+            clearButton = new Button();
 
             statusStrip = new StatusStrip();
 
@@ -67,10 +69,18 @@ namespace Generator
             generateButton.TabIndex = 3;
             generateButton.Text = "Generate";
 
+            clearButton.Click += ClearButtonClick;
+            clearButton.Location = new Point(400, 135);
+            clearButton.Margin = new Padding(0, 0, 0, 0);
+            clearButton.Name = "clearButton";
+            clearButton.Size = new Size(100, 30);
+            clearButton.TabIndex = 4;
+            clearButton.Text = "Clear";
+
             statusStrip.Items.Add(statusLabel);
             statusStrip.Name = "statusStrip";
             statusStrip.SizingGrip = false;
-            statusStrip.TabIndex = 4;
+            statusStrip.TabIndex = 5;
             statusStrip.TabStop = false;
 
             statusLabel.Alignment = ToolStripItemAlignment.Left;
@@ -89,6 +99,7 @@ namespace Generator
             Controls.Add(testBox);
 
             Controls.Add(generateButton);
+            Controls.Add(clearButton);
 
             Controls.Add(statusStrip);
 
