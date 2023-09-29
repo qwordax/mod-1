@@ -15,12 +15,12 @@ namespace Generator
 
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
-
+            statusLabel.Text = "Done!";
         }
 
         private void ClearButtonClick(Object sender, EventArgs args)
         {
-
+            statusLabel.Text = "";
         }
     }
 }

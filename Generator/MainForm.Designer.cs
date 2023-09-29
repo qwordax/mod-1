@@ -68,7 +68,7 @@ namespace Generator
             parameterBox.Location = new Point(5, 5);
             parameterBox.Margin = new Padding(0, 0, 0, 0);
             parameterBox.Name = "parameterBox";
-            parameterBox.Size = new Size(300, 100);
+            parameterBox.Size = new Size(300, 230);
             parameterBox.TabIndex = 0;
             parameterBox.Text = "Parameters";
 
@@ -80,10 +80,10 @@ namespace Generator
                 radioButton4
             });
 
-            generatorBox.Location = new Point(5, 110);
+            generatorBox.Location = new Point(5, 240);
             generatorBox.Margin = new Padding(0, 0, 0, 0);
             generatorBox.Name = "generatorBox";
-            generatorBox.Size = new Size(300, 300);
+            generatorBox.Size = new Size(300, 225);
             generatorBox.TabIndex = 1;
             generatorBox.Text = "Generators";
 
@@ -111,15 +111,15 @@ namespace Generator
             generateButton.Location = new Point(310, 535);
             generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
-            generateButton.Size = new Size(340, 30);
+            generateButton.Size = new Size(440, 30);
             generateButton.TabIndex = 4;
             generateButton.Text = "Generate";
 
             clearButton.Click += ClearButtonClick;
-            clearButton.Location = new Point(655, 535);
+            clearButton.Location = new Point(755, 535);
             clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
-            clearButton.Size = new Size(340, 30);
+            clearButton.Size = new Size(440, 30);
             clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
 
@@ -133,6 +133,7 @@ namespace Generator
             statusLabel.Name = "toolStripStatusLabel";
             statusLabel.Text = "";
 
+            radioButton1.Checked = true;
             radioButton1.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
@@ -238,7 +239,7 @@ namespace Generator
             checkBox8.Text = "№ 8";
 
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 600);
+            ClientSize = new Size(1200, 600);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
