@@ -31,17 +31,19 @@ namespace Generator
 
             if (radioButton2.Checked)
             {
-                generator = new Lehmer(123, 123, 123);
+                generator = new Lehmer(36_786_549,
+                    UInt64.MaxValue,
+                    5_542_985_019_385);
             }
 
             if (radioButton3.Checked)
             {
-                generator = new MPM(123, 123);
+                generator = new MPM(19_283_865, 9_817_279_234_659);
             }
 
             if (radioButton4.Checked)
             {
-                generator = new LFSR(123);
+                generator = new LFSR(UInt64.MaxValue - 103_875_636_285);
             }
 
             for (UInt64 i = 0; i < n; i++)
