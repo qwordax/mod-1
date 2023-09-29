@@ -16,6 +16,11 @@ namespace Generator
 
         private ToolStripStatusLabel statusLabel;
 
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton3;
+        private RadioButton radioButton4;
+
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
@@ -37,6 +42,11 @@ namespace Generator
             statusStrip = new StatusStrip();
 
             statusLabel = new ToolStripStatusLabel();
+
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            radioButton4 = new RadioButton();
 
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
@@ -62,14 +72,23 @@ namespace Generator
             parameterBox.TabIndex = 0;
             parameterBox.Text = "Parameters";
 
+            generatorBox.Controls.AddRange(new RadioButton[]
+            {
+                radioButton1,
+                radioButton2,
+                radioButton3,
+                radioButton4
+            });
+
             generatorBox.Location = new Point(5, 110);
             generatorBox.Margin = new Padding(0, 0, 0, 0);
             generatorBox.Name = "generatorBox";
-            generatorBox.Size = new Size(300, 100);
+            generatorBox.Size = new Size(300, 300);
             generatorBox.TabIndex = 1;
             generatorBox.Text = "Generators";
 
-            testBox.Controls.AddRange(new CheckBox[] {
+            testBox.Controls.AddRange(new CheckBox[]
+            {
                 checkBox1,
                 checkBox2,
                 checkBox3,
@@ -80,27 +99,27 @@ namespace Generator
                 checkBox8
             });
 
-            testBox.Location = new Point(5, 215);
+            testBox.Location = new Point(5, 470);
             testBox.Margin = new Padding(0, 0, 0, 0);
             testBox.Name = "testBox";
-            testBox.Size = new Size(265, 95);
+            testBox.Size = new Size(300, 95);
             testBox.TabIndex = 3;
             testBox.TabStop = false;
             testBox.Text = "Tests";
 
             generateButton.Click += GenerateButtonClick;
-            generateButton.Location = new Point(400, 100);
+            generateButton.Location = new Point(310, 535);
             generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
-            generateButton.Size = new Size(100, 30);
+            generateButton.Size = new Size(340, 30);
             generateButton.TabIndex = 4;
             generateButton.Text = "Generate";
 
             clearButton.Click += ClearButtonClick;
-            clearButton.Location = new Point(400, 135);
+            clearButton.Location = new Point(655, 535);
             clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
-            clearButton.Size = new Size(100, 30);
+            clearButton.Size = new Size(340, 30);
             clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
 
@@ -113,6 +132,46 @@ namespace Generator
             statusLabel.Alignment = ToolStripItemAlignment.Left;
             statusLabel.Name = "toolStripStatusLabel";
             statusLabel.Text = "";
+
+            radioButton1.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            radioButton1.Location = new Point(5, 25);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(100, 30);
+            radioButton1.TabIndex = 3;
+            radioButton1.Text = "BuiltIn";
+
+            radioButton2.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            radioButton2.Location = new Point(5, 60);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(100, 30);
+            radioButton2.TabIndex = 3;
+            radioButton2.Text = "Lehmer";
+
+            radioButton3.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            radioButton3.Location = new Point(5, 95);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(100, 30);
+            radioButton3.TabIndex = 3;
+            radioButton3.Text = "MPM";
+
+            radioButton4.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            radioButton4.Location = new Point(5, 130);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(100, 30);
+            radioButton4.TabIndex = 3;
+            radioButton4.Text = "LFSR";
 
             checkBox1.AutoCheck = false;
             checkBox1.Location = new Point(5, 25);
@@ -179,7 +238,7 @@ namespace Generator
             checkBox8.Text = "№ 8";
 
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 600);
+            ClientSize = new Size(1000, 600);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
