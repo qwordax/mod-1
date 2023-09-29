@@ -248,7 +248,7 @@ namespace Generator
             //
             upDown1.Location = new Point(70, 25);
             upDown1.Maximum = 100_000_000;
-            upDown1.Minimum = 1;
+            upDown1.Minimum = 100;
             upDown1.Name = "upDown1";
             upDown1.Size = new Size(225, 30);
 
@@ -259,7 +259,7 @@ namespace Generator
             //
             upDown2.Location = new Point(70, 60);
             upDown2.Maximum = 1_000;
-            upDown2.Minimum = 1;
+            upDown2.Minimum = 10;
             upDown2.Name = "upDown2";
             upDown2.Size = new Size(225, 30);
 
