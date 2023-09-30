@@ -11,6 +11,8 @@ namespace Generator
         private GroupBox testBox;
 
         private Chart chart;
+        private ChartArea chartArea;
+        private Series chartSeries;
 
         private Button generateButton;
         private Button clearButton;
@@ -51,6 +53,8 @@ namespace Generator
             testBox = new GroupBox();
 
             chart = new Chart();
+            chartArea = new ChartArea();
+            chartSeries = new Series();
 
             generateButton = new Button();
             clearButton = new Button();
@@ -158,12 +162,27 @@ namespace Generator
             //
             // chart.
             //
+            chart.ChartAreas.Add(chartArea);
             chart.Location = new Point(310, 15);
             chart.Margin = new Padding(0, 0, 0, 0);
             chart.Name = "chart";
+            chart.Series.Add(chartSeries);
             chart.Size = new Size(885, 515);
             chart.TabIndex = 0;
             chart.TabStop = false;
+
+            //
+            // chartArea.
+            //
+            chartArea.Name = "chartArea";
+
+            //
+            // chartSeries.
+            //
+            chartSeries.ChartArea = "chartArea";
+            chartSeries.Name = "chartSeries";
+            chartSeries.XValueType = ChartValueType.UInt64;
+            chartSeries.YValueType = ChartValueType.UInt64;
 
             //
             // generateButton.

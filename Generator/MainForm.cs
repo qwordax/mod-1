@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 using Generator.Algorithms;
 using Generator.Utilities;
@@ -66,6 +67,13 @@ namespace Generator
                 counts[value / step] += 1;
             }
 
+            chartSeries.Points.Clear();
+
+            for (UInt64 i = 0; i < m; i++)
+            {
+                chartSeries.Points.Add(new DataPoint(i, counts[i]));
+            }
+
             checkBox1.Checked = true;
             checkBox2.Checked = true;
             checkBox3.Checked = true;
@@ -82,6 +90,8 @@ namespace Generator
         {
             textBox1.Text = "";
             textBox2.Text = "";
+
+            chartSeries.Points.Clear();
 
             checkBox1.Checked = false;
             checkBox2.Checked = false;
