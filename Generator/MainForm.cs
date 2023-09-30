@@ -32,7 +32,7 @@ namespace Generator
             if (radioButton2.Checked)
             {
                 generator = new Lehmer(36_786_549,
-                    UInt64.MaxValue,
+                    UInt64.MaxValue - 1_576,
                     5_542_985_019_385);
             }
 
