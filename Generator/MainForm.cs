@@ -27,7 +27,6 @@ namespace Generator
             List<UInt64> values = new List<UInt64>();
 
             UInt64 n = (UInt64)upDown1.Value;
-            UInt64 m = (UInt64)upDown2.Value;
 
             if (radioButton2.Checked)
             {
@@ -57,7 +56,15 @@ namespace Generator
             textBox1.Text = String.Format("{0:e}", expect);
             textBox2.Text = String.Format("{0:e}", variate);
 
-            parameterBox.Update();
+            UInt64 m = (UInt64)upDown2.Value;
+
+            UInt64 step = UInt64.MaxValue / m;
+            UInt64[] counts = new UInt64[m];
+
+            foreach (UInt64 value in values)
+            {
+                counts[value / step] += 1;
+            }
 
             checkBox1.Checked = true;
             checkBox2.Checked = true;
