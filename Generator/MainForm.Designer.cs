@@ -174,12 +174,16 @@ namespace Generator
             //
             // chartArea.
             //
+            chartArea.AxisY.Enabled = AxisEnabled.False;
             chartArea.Name = "chartArea";
 
             //
             // chartSeries.
             //
             chartSeries.ChartArea = "chartArea";
+            chartSeries.Color = Color.Black;
+            chartSeries.Font = new Font(generateButton.Font, FontStyle.Regular);
+            chartSeries.IsXValueIndexed = true;
             chartSeries.Name = "chartSeries";
             chartSeries.XValueType = ChartValueType.UInt64;
             chartSeries.YValueType = ChartValueType.UInt64;

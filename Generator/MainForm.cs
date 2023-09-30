@@ -71,7 +71,7 @@ namespace Generator
 
             for (UInt64 i = 0; i < m; i++)
             {
-                chartSeries.Points.Add(new DataPoint(i, counts[i]));
+                chartSeries.Points.AddXY(i, counts[i]);
             }
 
             checkBox1.Checked = true;
