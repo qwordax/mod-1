@@ -182,7 +182,6 @@ namespace Generator
             //
             chartSeries.ChartArea = "chartArea";
             chartSeries.Color = Color.Black;
-            chartSeries.Font = new Font(generateButton.Font, FontStyle.Regular);
             chartSeries.IsXValueIndexed = true;
             chartSeries.Name = "chartSeries";
             chartSeries.XValueType = ChartValueType.UInt64;
