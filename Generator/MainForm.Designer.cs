@@ -174,6 +174,7 @@ namespace Generator
             //
             // chartArea.
             //
+            chartArea.AxisX.MajorGrid.Enabled = false;
             chartArea.AxisY.Enabled = AxisEnabled.False;
             chartArea.Name = "chartArea";
 
@@ -182,6 +183,7 @@ namespace Generator
             //
             chartSeries.ChartArea = "chartArea";
             chartSeries.Color = Color.Black;
+            chartSeries.IsValueShownAsLabel = true;
             chartSeries.IsXValueIndexed = true;
             chartSeries.Name = "chartSeries";
             chartSeries.XValueType = ChartValueType.UInt64;
