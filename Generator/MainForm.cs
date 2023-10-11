@@ -30,19 +30,20 @@ namespace Generator
 
             if (radioButton2.Checked)
             {
-                generator = new Lehmer(36_786_549,
-                    UInt64.MaxValue - 1_576,
-                    5_542_985_019_385);
+                generator = new Lehmer(a: 36_786_549,
+                    m: UInt64.MaxValue - 1_576,
+                    x: 5_542_985_019_385);
             }
 
             if (radioButton3.Checked)
             {
-                generator = new MPM(19_283_865, 9_817_279_234_659);
+                generator = new MPM(r0: 19_283_865,
+                    r1: 9_817_279_234_659);
             }
 
             if (radioButton4.Checked)
             {
-                generator = new LFSR(UInt64.MaxValue - 103_875_636_285);
+                generator = new LFSR(x: UInt64.MaxValue - 103_875_636_285);
             }
 
             for (UInt64 i = 0; i < n; i++)
@@ -59,6 +60,7 @@ namespace Generator
             UInt64 m = (UInt64)upDown2.Value;
 
             UInt64 step = UInt64.MaxValue / m;
+
             UInt64[] counts = new UInt64[m];
 
             foreach (UInt64 value in values)
