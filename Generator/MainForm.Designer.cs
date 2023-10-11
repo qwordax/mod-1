@@ -234,6 +234,7 @@ namespace Generator
             //
             // generateButton.
             //
+            generateButton.Click += ClearButtonClick;
             generateButton.Click += GenerateButtonClick;
             generateButton.Location = new Point(310, 715);
             generateButton.Margin = new Padding(0, 0, 0, 0);
@@ -429,7 +430,6 @@ namespace Generator
             //
             // testCheckBox1.
             //
-            testCheckBox1.AutoCheck = false;
             testCheckBox1.Location = new Point(5, 25);
             testCheckBox1.Name = "testCheckBox1";
             testCheckBox1.Size = new Size(60, 30);
@@ -439,7 +439,6 @@ namespace Generator
             //
             // testCheckBox2.
             //
-            testCheckBox2.AutoCheck = false;
             testCheckBox2.Location = new Point(70, 25);
             testCheckBox2.Name = "testCheckBox2";
             testCheckBox2.Size = new Size(60, 30);
@@ -449,7 +448,6 @@ namespace Generator
             //
             // testCheckBox3.
             //
-            testCheckBox3.AutoCheck = false;
             testCheckBox3.Location = new Point(135, 25);
             testCheckBox3.Name = "testCheckBox3";
             testCheckBox3.Size = new Size(60, 30);
@@ -459,7 +457,6 @@ namespace Generator
             //
             // testCheckBox4.
             //
-            testCheckBox4.AutoCheck = false;
             testCheckBox4.Location = new Point(200, 25);
             testCheckBox4.Name = "testCheckBox4";
             testCheckBox4.Size = new Size(60, 30);
@@ -469,7 +466,6 @@ namespace Generator
             //
             // testCheckBox5.
             //
-            testCheckBox5.AutoCheck = false;
             testCheckBox5.Location = new Point(5, 60);
             testCheckBox5.Name = "testCheckBox5";
             testCheckBox5.Size = new Size(60, 30);
@@ -479,7 +475,6 @@ namespace Generator
             //
             // testCheckBox6.
             //
-            testCheckBox6.AutoCheck = false;
             testCheckBox6.Location = new Point(70, 60);
             testCheckBox6.Name = "testCheckBox6";
             testCheckBox6.Size = new Size(60, 30);
@@ -489,7 +484,6 @@ namespace Generator
             //
             // testCheckBox7.
             //
-            testCheckBox7.AutoCheck = false;
             testCheckBox7.Location = new Point(135, 60);
             testCheckBox7.Name = "testCheckBox7";
             testCheckBox7.Size = new Size(60, 30);
@@ -499,7 +493,6 @@ namespace Generator
             //
             // testCheckBox8.
             //
-            testCheckBox8.AutoCheck = false;
             testCheckBox8.Location = new Point(200, 60);
             testCheckBox8.Name = "testCheckBox8";
             testCheckBox8.Size = new Size(60, 30);
