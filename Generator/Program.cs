@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace Generator
 {
+    /// <summary>
+    /// The main class of the application.
+    /// </summary>
     internal static class Program
     {
         [STAThread]
