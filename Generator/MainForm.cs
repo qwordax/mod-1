@@ -30,22 +30,22 @@ namespace Generator
 
             List<UInt64> values = new List<UInt64>();
 
-            UInt64 n = (UInt64)upDown1.Value;
+            UInt64 n = (UInt64)parameterUpDown1.Value;
 
-            if (radioButton2.Checked)
+            if (generatorButton2.Checked)
             {
                 generator = new Lehmer(a: 36_786_549,
                     m: UInt64.MaxValue - 1_576,
                     x: 5_542_985_019_385);
             }
 
-            if (radioButton3.Checked)
+            if (generatorButton3.Checked)
             {
                 generator = new MPM(r0: 19_283_865,
                     r1: 9_817_279_234_659);
             }
 
-            if (radioButton4.Checked)
+            if (generatorButton4.Checked)
             {
                 generator = new LFSR(x: UInt64.MaxValue - 103_875_636_285);
             }
@@ -55,17 +55,23 @@ namespace Generator
                 values.Add(generator.Next());
             }
 
-            Double mean = Mean.Compute(values);
-            Double variation = Variation.Compute(values);
+            Double expectM = (Double)UInt64.MaxValue / 2.0;
+            Double expectV = (Double)UInt64.MaxValue * UInt64.MaxValue / 12.0;
 
-            textBox1.Text = String.Format("{0:e}", mean);
-            textBox2.Text = String.Format("{0:e}", variation);
+            Double computeM = Mean.Compute(values);
+            Double computeV = Variation.Compute(values);
 
-            UInt64 m = (UInt64)upDown2.Value;
+            expectedTextBox1.Text = String.Format("{0:E}", expectM);
+            expectedTextBox2.Text = String.Format("{0:E}", expectV);
 
-            UInt64 step = UInt64.MaxValue / m;
+            computedTextBox1.Text = String.Format("{0:E}", computeM);
+            computedTextBox2.Text = String.Format("{0:E}", computeV);
 
-            UInt64[] counts = new UInt64[m];
+            UInt64 k = (UInt64)parameterUpDown2.Value;
+
+            UInt64 step = UInt64.MaxValue / k;
+
+            UInt64[] counts = new UInt64[k];
 
             foreach (UInt64 value in values)
             {
@@ -74,18 +80,27 @@ namespace Generator
 
             chartSeries.Points.Clear();
 
-            for (UInt64 i = 0; i < m; i++)
+            for (UInt64 i = 0; i < k; i++)
             {
                 chartSeries.Points.AddXY(i, counts[i]);
             }
 
+            Text = "Generator — Testing…";
+
             testCheckBox1.Checked = true;
+
             testCheckBox2.Checked = true;
+
             testCheckBox3.Checked = true;
+
             testCheckBox4.Checked = true;
+
             testCheckBox5.Checked = true;
+
             testCheckBox6.Checked = true;
+
             testCheckBox7.Checked = true;
+
             testCheckBox8.Checked = true;
 
             Text = "Generator — Done!";
@@ -95,10 +110,13 @@ namespace Generator
         {
             Text = "Generator";
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-
             chartSeries.Points.Clear();
+
+            expectedTextBox1.Text = "";
+            expectedTextBox2.Text = "";
+
+            computedTextBox1.Text = "";
+            computedTextBox2.Text = "";
 
             testCheckBox1.Checked = false;
             testCheckBox2.Checked = false;

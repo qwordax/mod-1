@@ -7,6 +7,8 @@ namespace Generator
     public partial class MainForm
     {
         private GroupBox parameterBox;
+        private GroupBox expectedBox;
+        private GroupBox computedBox;
         private GroupBox generatorBox;
         private GroupBox testBox;
 
@@ -19,21 +21,28 @@ namespace Generator
         private Button generateButton;
         private Button clearButton;
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label parameterLabel1;
+        private Label parameterLabel2;
 
-        private NumericUpDown upDown1;
-        private NumericUpDown upDown2;
+        private NumericUpDown parameterUpDown1;
+        private NumericUpDown parameterUpDown2;
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Label expectedLabel1;
+        private Label expectedLabel2;
 
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
+        private TextBox expectedTextBox1;
+        private TextBox expectedTextBox2;
+
+        private Label computedLabel1;
+        private Label computedLabel2;
+
+        private TextBox computedTextBox1;
+        private TextBox computedTextBox2;
+
+        private RadioButton generatorButton1;
+        private RadioButton generatorButton2;
+        private RadioButton generatorButton3;
+        private RadioButton generatorButton4;
 
         private CheckBox testCheckBox1;
         private CheckBox testCheckBox2;
@@ -47,6 +56,8 @@ namespace Generator
         private void InitializeComponent()
         {
             parameterBox = new GroupBox();
+            expectedBox = new GroupBox();
+            computedBox = new GroupBox();
             generatorBox = new GroupBox();
             testBox = new GroupBox();
 
@@ -59,21 +70,28 @@ namespace Generator
             generateButton = new Button();
             clearButton = new Button();
 
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            parameterLabel1 = new Label();
+            parameterLabel2 = new Label();
 
-            upDown1 = new NumericUpDown();
-            upDown2 = new NumericUpDown();
+            parameterUpDown1 = new NumericUpDown();
+            parameterUpDown2 = new NumericUpDown();
 
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            expectedLabel1 = new Label();
+            expectedLabel2 = new Label();
 
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            expectedTextBox1 = new TextBox();
+            expectedTextBox2 = new TextBox();
+
+            computedLabel1 = new Label();
+            computedLabel2 = new Label();
+
+            computedTextBox1 = new TextBox();
+            computedTextBox2 = new TextBox();
+
+            generatorButton1 = new RadioButton();
+            generatorButton2 = new RadioButton();
+            generatorButton3 = new RadioButton();
+            generatorButton4 = new RadioButton();
 
             testCheckBox1 = new CheckBox();
             testCheckBox2 = new CheckBox();
@@ -85,6 +103,8 @@ namespace Generator
             testCheckBox8 = new CheckBox();
 
             parameterBox.SuspendLayout();
+            expectedBox.SuspendLayout();
+            computedBox.SuspendLayout();
             generatorBox.SuspendLayout();
             testBox.SuspendLayout();
 
@@ -95,39 +115,63 @@ namespace Generator
             //
             parameterBox.Controls.AddRange(new Control[]
             {
-                label1,
-                label2,
-                label3,
-                label4,
-                upDown1,
-                upDown2,
-                textBox1,
-                textBox2
+                parameterLabel1,
+                parameterLabel2,
+                parameterUpDown1,
+                parameterUpDown2
             });
 
             parameterBox.Location = new Point(5, 5);
-            parameterBox.Margin = new Padding(0, 0, 0, 0);
             parameterBox.Name = "parameterBox";
-            parameterBox.Size = new Size(300, 230);
-            parameterBox.TabIndex = 0;
+            parameterBox.Size = new Size(300, 95);
             parameterBox.Text = "Parameters";
+
+            //
+            // expectedBox.
+            //
+            expectedBox.Controls.AddRange(new Control[]
+            {
+                expectedLabel1,
+                expectedLabel2,
+                expectedTextBox1,
+                expectedTextBox2
+            });
+
+            expectedBox.Location = new Point(5, 105);
+            expectedBox.Name = "expectedBox";
+            expectedBox.Size = new Size(300, 95);
+            expectedBox.Text = "Expected";
+
+            //
+            // computedBox.
+            //
+            computedBox.Controls.AddRange(new Control[]
+            {
+                computedLabel1,
+                computedLabel2,
+                computedTextBox1,
+                computedTextBox2
+            });
+
+            computedBox.Location = new Point(5, 205);
+            computedBox.Name = "computedBox";
+            computedBox.Size = new Size(300, 95);
+            computedBox.Text = "Computed";
 
             //
             // generatorBox.
             //
             generatorBox.Controls.AddRange(new RadioButton[]
             {
-                radioButton1,
-                radioButton2,
-                radioButton3,
-                radioButton4
+                generatorButton1,
+                generatorButton2,
+                generatorButton3,
+                generatorButton4
             });
 
-            generatorBox.Location = new Point(5, 240);
-            generatorBox.Margin = new Padding(0, 0, 0, 0);
+            generatorBox.Location = new Point(5, 305);
             generatorBox.Name = "generatorBox";
-            generatorBox.Size = new Size(300, 225);
-            generatorBox.TabIndex = 1;
+            generatorBox.Size = new Size(300, 305);
             generatorBox.Text = "Generators";
 
             //
@@ -145,12 +189,9 @@ namespace Generator
                 testCheckBox8
             });
 
-            testBox.Location = new Point(5, 470);
-            testBox.Margin = new Padding(0, 0, 0, 0);
+            testBox.Location = new Point(5, 615);
             testBox.Name = "testBox";
             testBox.Size = new Size(300, 95);
-            testBox.TabIndex = 3;
-            testBox.TabStop = false;
             testBox.Text = "Tests";
 
             //
@@ -162,7 +203,6 @@ namespace Generator
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
             chart.Size = new Size(985, 695);
-            chart.TabIndex = 0;
             chart.TabStop = false;
 
             //
@@ -186,9 +226,9 @@ namespace Generator
             // checkBox.
             //
             checkBox.CheckedChanged += CheckBoxCheckedChange;
-            checkBox.Location = new Point(5, 715);
+            checkBox.Location = new Point(10, 715);
             checkBox.Name = "checkBox";
-            checkBox.Size = new Size(300, 30);
+            checkBox.Size = new Size(295, 30);
             checkBox.Text = "Show Labels";
 
             //
@@ -199,7 +239,6 @@ namespace Generator
             generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
             generateButton.Size = new Size(490, 30);
-            generateButton.TabIndex = 4;
             generateButton.Text = "Generate";
 
             //
@@ -210,141 +249,182 @@ namespace Generator
             clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(490, 30);
-            clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
 
             //
-            // label1.
+            // parameterLabel1.
             //
-            label1.Font = new Font(label1.Font, FontStyle.Italic);
-            label1.Location = new Point(5, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 30);
-            label1.Text = "N";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            parameterLabel1.Font = new Font(parameterLabel1.Font, FontStyle.Italic);
+            parameterLabel1.Location = new Point(5, 25);
+            parameterLabel1.Name = "parameterLabel1";
+            parameterLabel1.Size = new Size(60, 30);
+            parameterLabel1.Text = "N";
+            parameterLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // label2.
+            // parameterLabel2.
             //
-            label2.Font = new Font(label2.Font, FontStyle.Italic);
-            label2.Location = new Point(5, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(60, 30);
-            label2.Text = "M";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            parameterLabel2.Font = new Font(parameterLabel2.Font, FontStyle.Italic);
+            parameterLabel2.Location = new Point(5, 60);
+            parameterLabel2.Name = "parameterLabel2";
+            parameterLabel2.Size = new Size(60, 30);
+            parameterLabel2.Text = "K";
+            parameterLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // label3.
+            // parameterUpDown1.
             //
-            label3.Font = new Font(label3.Font, FontStyle.Italic);
-            label3.Location = new Point(5, 160);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 30);
-            label3.Text = "E";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            parameterUpDown1.Location = new Point(70, 25);
+            parameterUpDown1.Maximum = 100_000_000;
+            parameterUpDown1.Minimum = 100;
+            parameterUpDown1.Name = "parameterUpDown1";
+            parameterUpDown1.Size = new Size(225, 30);
+            parameterUpDown1.TextAlign = HorizontalAlignment.Right;
+            parameterUpDown1.UpDownAlign = LeftRightAlignment.Left;
+
+            parameterUpDown1.Value = 10_000;
 
             //
-            // label4.
+            // parameterUpDown2.
             //
-            label4.Font = new Font(label4.Font, FontStyle.Italic);
-            label4.Location = new Point(5, 195);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 30);
-            label4.Text = "V";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
+            parameterUpDown2.Location = new Point(70, 60);
+            parameterUpDown2.Maximum = 1_000;
+            parameterUpDown2.Minimum = 10;
+            parameterUpDown2.Name = "parameterUpDown2";
+            parameterUpDown2.Size = new Size(225, 30);
+            parameterUpDown2.TextAlign = HorizontalAlignment.Right;
+            parameterUpDown2.UpDownAlign = LeftRightAlignment.Left;
+
+            parameterUpDown2.Value = 256;
 
             //
-            // upDown1.
+            // expectedLabel1.
             //
-            upDown1.Location = new Point(70, 25);
-            upDown1.Maximum = 100_000_000;
-            upDown1.Minimum = 100;
-            upDown1.Name = "upDown1";
-            upDown1.Size = new Size(225, 30);
-
-            upDown1.Value = 10_000;
-
-            //
-            // upDown2.
-            //
-            upDown2.Location = new Point(70, 60);
-            upDown2.Maximum = 1_000;
-            upDown2.Minimum = 10;
-            upDown2.Name = "upDown2";
-            upDown2.Size = new Size(225, 30);
-
-            upDown2.Value = 256;
+            expectedLabel1.Font = new Font(expectedLabel1.Font, FontStyle.Italic);
+            expectedLabel1.Location = new Point(5, 25);
+            expectedLabel1.Name = "expectedLabel1";
+            expectedLabel1.Size = new Size(60, 30);
+            expectedLabel1.Text = "M";
+            expectedLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // textBox1.
+            // expectedLabel2.
             //
-            textBox1.Location = new Point(70, 160);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(225, 30);
-            textBox1.TabStop = false;
+            expectedLabel2.Font = new Font(expectedLabel2.Font, FontStyle.Italic);
+            expectedLabel2.Location = new Point(5, 60);
+            expectedLabel2.Name = "expectedLabel2";
+            expectedLabel2.Size = new Size(60, 30);
+            expectedLabel2.Text = "V";
+            expectedLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // textBox2.
+            // expectedTextBox1.
             //
-            textBox2.Location = new Point(70, 195);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(225, 30);
-            textBox2.TabStop = false;
+            expectedTextBox1.Location = new Point(70, 25);
+            expectedTextBox1.Name = "expectedTextBox1";
+            expectedTextBox1.ReadOnly = true;
+            expectedTextBox1.Size = new Size(225, 30);
+            expectedTextBox1.TabStop = false;
+            expectedTextBox1.TextAlign = HorizontalAlignment.Right;
 
             //
-            // radioButton1.
+            // expectedTextBox2.
             //
-            radioButton1.Checked = true;
-            radioButton1.Font = new Font("Courier New",
+            expectedTextBox2.Location = new Point(70, 60);
+            expectedTextBox2.Name = "expectedTextBox2";
+            expectedTextBox2.ReadOnly = true;
+            expectedTextBox2.Size = new Size(225, 30);
+            expectedTextBox2.TabStop = false;
+            expectedTextBox2.TextAlign = HorizontalAlignment.Right;
+
+            //
+            // computedLabel1.
+            //
+            computedLabel1.Font = new Font(computedLabel1.Font, FontStyle.Italic);
+            computedLabel1.Location = new Point(5, 25);
+            computedLabel1.Name = "computedLabel1";
+            computedLabel1.Size = new Size(60, 30);
+            computedLabel1.Text = "M";
+            computedLabel1.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // computedLabel2.
+            //
+            computedLabel2.Font = new Font(computedLabel2.Font, FontStyle.Italic);
+            computedLabel2.Location = new Point(5, 60);
+            computedLabel2.Name = "computedLabel2";
+            computedLabel2.Size = new Size(60, 30);
+            computedLabel2.Text = "V";
+            computedLabel2.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // computedTextBox1.
+            //
+            computedTextBox1.Location = new Point(70, 25);
+            computedTextBox1.Name = "computedTextBox1";
+            computedTextBox1.ReadOnly = true;
+            computedTextBox1.Size = new Size(225, 30);
+            computedTextBox1.TabStop = false;
+            computedTextBox1.TextAlign = HorizontalAlignment.Right;
+
+            //
+            // computedTextBox2.
+            //
+            computedTextBox2.Location = new Point(70, 60);
+            computedTextBox2.Name = "computedTextBox2";
+            computedTextBox2.ReadOnly = true;
+            computedTextBox2.Size = new Size(225, 30);
+            computedTextBox2.TabStop = false;
+            computedTextBox2.TextAlign = HorizontalAlignment.Right;
+
+            //
+            // generatorButton1.
+            //
+            generatorButton1.Checked = true;
+            generatorButton1.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton1.Location = new Point(5, 25);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(100, 30);
-            radioButton1.TabIndex = 3;
-            radioButton1.Text = "BuiltIn";
+            generatorButton1.Location = new Point(5, 25);
+            generatorButton1.Name = "generatorButton1";
+            generatorButton1.Size = new Size(100, 30);
+            generatorButton1.Text = "BuiltIn";
 
             //
-            // radioButton2.
+            // generatorButton2.
             //
-            radioButton2.Font = new Font("Courier New",
+            generatorButton2.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton2.Location = new Point(5, 60);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(100, 30);
-            radioButton2.TabIndex = 3;
-            radioButton2.Text = "Lehmer";
+            generatorButton2.Location = new Point(5, 60);
+            generatorButton2.Name = "generatorButton2";
+            generatorButton2.Size = new Size(100, 30);
+            generatorButton2.Text = "Lehmer";
 
             //
-            // radioButton3.
+            // generatorButton3.
             //
-            radioButton3.Font = new Font("Courier New",
+            generatorButton3.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton3.Location = new Point(5, 95);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(100, 30);
-            radioButton3.TabIndex = 3;
-            radioButton3.Text = "MPM";
+            generatorButton3.Location = new Point(5, 95);
+            generatorButton3.Name = "generatorButton3";
+            generatorButton3.Size = new Size(100, 30);
+            generatorButton3.Text = "MPM";
 
             //
-            // radioButton4.
+            // generatorButton4.
             //
-            radioButton4.Font = new Font("Courier New",
+            generatorButton4.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton4.Location = new Point(5, 130);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(100, 30);
-            radioButton4.TabIndex = 3;
-            radioButton4.Text = "LFSR";
+            generatorButton4.Location = new Point(5, 130);
+            generatorButton4.Name = "generatorButton4";
+            generatorButton4.Size = new Size(100, 30);
+            generatorButton4.Text = "LFSR";
 
             //
             // testCheckBox1.
@@ -353,7 +433,6 @@ namespace Generator
             testCheckBox1.Location = new Point(5, 25);
             testCheckBox1.Name = "testCheckBox1";
             testCheckBox1.Size = new Size(60, 30);
-            testCheckBox1.TabIndex = 0;
             testCheckBox1.TabStop = false;
             testCheckBox1.Text = "№ 1";
 
@@ -364,7 +443,6 @@ namespace Generator
             testCheckBox2.Location = new Point(70, 25);
             testCheckBox2.Name = "testCheckBox2";
             testCheckBox2.Size = new Size(60, 30);
-            testCheckBox2.TabIndex = 0;
             testCheckBox2.TabStop = false;
             testCheckBox2.Text = "№ 2";
 
@@ -375,7 +453,6 @@ namespace Generator
             testCheckBox3.Location = new Point(135, 25);
             testCheckBox3.Name = "testCheckBox3";
             testCheckBox3.Size = new Size(60, 30);
-            testCheckBox3.TabIndex = 0;
             testCheckBox3.TabStop = false;
             testCheckBox3.Text = "№ 3";
 
@@ -386,7 +463,6 @@ namespace Generator
             testCheckBox4.Location = new Point(200, 25);
             testCheckBox4.Name = "testCheckBox4";
             testCheckBox4.Size = new Size(60, 30);
-            testCheckBox4.TabIndex = 0;
             testCheckBox4.TabStop = false;
             testCheckBox4.Text = "№ 4";
 
@@ -397,7 +473,6 @@ namespace Generator
             testCheckBox5.Location = new Point(5, 60);
             testCheckBox5.Name = "testCheckBox5";
             testCheckBox5.Size = new Size(60, 30);
-            testCheckBox5.TabIndex = 0;
             testCheckBox5.TabStop = false;
             testCheckBox5.Text = "№ 5";
 
@@ -408,7 +483,6 @@ namespace Generator
             testCheckBox6.Location = new Point(70, 60);
             testCheckBox6.Name = "testCheckBox6";
             testCheckBox6.Size = new Size(60, 30);
-            testCheckBox6.TabIndex = 0;
             testCheckBox6.TabStop = false;
             testCheckBox6.Text = "№ 6";
 
@@ -419,7 +493,6 @@ namespace Generator
             testCheckBox7.Location = new Point(135, 60);
             testCheckBox7.Name = "testCheckBox7";
             testCheckBox7.Size = new Size(60, 30);
-            testCheckBox7.TabIndex = 0;
             testCheckBox7.TabStop = false;
             testCheckBox7.Text = "№ 7";
 
@@ -430,7 +503,6 @@ namespace Generator
             testCheckBox8.Location = new Point(200, 60);
             testCheckBox8.Name = "testCheckBox8";
             testCheckBox8.Size = new Size(60, 30);
-            testCheckBox8.TabIndex = 0;
             testCheckBox8.TabStop = false;
             testCheckBox8.Text = "№ 8";
 
@@ -444,18 +516,28 @@ namespace Generator
             MinimizeBox = false;
             Text = "Generator";
 
-            Controls.Add(parameterBox);
-            Controls.Add(generatorBox);
-            Controls.Add(testBox);
+            Controls.AddRange(new GroupBox[]
+            {
+                parameterBox,
+                expectedBox,
+                computedBox,
+                generatorBox,
+                testBox
+            });
 
             Controls.Add(chart);
 
             Controls.Add(checkBox);
 
-            Controls.Add(generateButton);
-            Controls.Add(clearButton);
+            Controls.AddRange(new Button[]
+            {
+                generateButton,
+                clearButton
+            });
 
             parameterBox.ResumeLayout(true);
+            expectedBox.ResumeLayout(true);
+            computedBox.ResumeLayout(true);
             generatorBox.ResumeLayout(true);
             testBox.ResumeLayout(true);
 
