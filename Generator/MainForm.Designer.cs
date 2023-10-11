@@ -209,7 +209,7 @@ namespace Generator
             // chartArea.
             //
             chartArea.AxisX.MajorGrid.Enabled = false;
-            chartArea.AxisY.Enabled = AxisEnabled.False;
+            chartArea.AxisY.MajorGrid.Enabled = false;
             chartArea.Name = "chartArea";
 
             //
