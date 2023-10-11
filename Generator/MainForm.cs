@@ -17,6 +17,11 @@ namespace Generator
             InitializeComponent();
         }
 
+        private void CheckBoxCheckedChange(Object sender, EventArgs args)
+        {
+            chartSeries.IsValueShownAsLabel = checkBox.Checked;
+        }
+
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
             Text = "Generator — Generating…";

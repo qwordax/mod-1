@@ -14,6 +14,8 @@ namespace Generator
         private ChartArea chartArea;
         private Series chartSeries;
 
+        private CheckBox checkBox;
+
         private Button generateButton;
         private Button clearButton;
 
@@ -51,6 +53,8 @@ namespace Generator
             chart = new Chart();
             chartArea = new ChartArea();
             chartSeries = new Series();
+
+            checkBox = new CheckBox();
 
             generateButton = new Button();
             clearButton = new Button();
@@ -173,11 +177,19 @@ namespace Generator
             //
             chartSeries.ChartArea = "chartArea";
             chartSeries.Color = Color.Black;
-            chartSeries.IsValueShownAsLabel = true;
             chartSeries.IsXValueIndexed = true;
             chartSeries.Name = "chartSeries";
             chartSeries.XValueType = ChartValueType.UInt64;
             chartSeries.YValueType = ChartValueType.UInt64;
+
+            //
+            // checkBox.
+            //
+            checkBox.CheckedChanged += CheckBoxCheckedChange;
+            checkBox.Location = new Point(5, 715);
+            checkBox.Name = "checkBox";
+            checkBox.Size = new Size(300, 30);
+            checkBox.Text = "Show Labels";
 
             //
             // generateButton.
@@ -437,6 +449,8 @@ namespace Generator
             Controls.Add(testBox);
 
             Controls.Add(chart);
+
+            Controls.Add(checkBox);
 
             Controls.Add(generateButton);
             Controls.Add(clearButton);
