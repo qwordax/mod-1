@@ -19,8 +19,7 @@ namespace Generator
 
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
-            statusLabel.Text = "Generating...";
-            statusStrip.Update();
+            Text = "Generator — Generating…";
 
             IRandomable generator = new BuiltIn();
 
@@ -84,11 +83,13 @@ namespace Generator
             checkBox7.Checked = true;
             checkBox8.Checked = true;
 
-            statusLabel.Text = "Done!";
+            Text = "Generator — Done!";
         }
 
         private void ClearButtonClick(Object sender, EventArgs args)
         {
+            Text = "Generator";
+
             textBox1.Text = "";
             textBox2.Text = "";
 
@@ -102,8 +103,6 @@ namespace Generator
             checkBox6.Checked = false;
             checkBox7.Checked = false;
             checkBox8.Checked = false;
-
-            statusLabel.Text = "";
         }
     }
 }

@@ -17,10 +17,6 @@ namespace Generator
         private Button generateButton;
         private Button clearButton;
 
-        private StatusStrip statusStrip;
-
-        private ToolStripStatusLabel statusLabel;
-
         private Label label1;
         private Label label2;
         private Label label3;
@@ -59,10 +55,6 @@ namespace Generator
             generateButton = new Button();
             clearButton = new Button();
 
-            statusStrip = new StatusStrip();
-
-            statusLabel = new ToolStripStatusLabel();
-
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -91,8 +83,6 @@ namespace Generator
             parameterBox.SuspendLayout();
             generatorBox.SuspendLayout();
             testBox.SuspendLayout();
-
-            statusStrip.SuspendLayout();
 
             SuspendLayout();
 
@@ -210,22 +200,6 @@ namespace Generator
             clearButton.Size = new Size(440, 30);
             clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
-
-            //
-            // statusStrip.
-            //
-            statusStrip.Items.Add(statusLabel);
-            statusStrip.Name = "statusStrip";
-            statusStrip.SizingGrip = false;
-            statusStrip.TabIndex = 0;
-            statusStrip.TabStop = false;
-
-            //
-            // statusLabel.
-            //
-            statusLabel.Alignment = ToolStripItemAlignment.Left;
-            statusLabel.Name = "toolStripStatusLabel";
-            statusLabel.Text = "";
 
             //
             // label1.
@@ -456,7 +430,7 @@ namespace Generator
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            Text = "Random Generator";
+            Text = "Generator";
 
             Controls.Add(parameterBox);
             Controls.Add(generatorBox);
@@ -467,13 +441,9 @@ namespace Generator
             Controls.Add(generateButton);
             Controls.Add(clearButton);
 
-            Controls.Add(statusStrip);
-
             parameterBox.ResumeLayout(true);
             generatorBox.ResumeLayout(true);
             testBox.ResumeLayout(true);
-
-            statusStrip.ResumeLayout(true);
 
             ResumeLayout(true);
         }
