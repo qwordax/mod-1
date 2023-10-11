@@ -6,7 +6,7 @@ namespace Generator.Utilities
     /// <summary>
     /// Represents a class of computing expectation.
     /// </summary>
-    public static class Expectation
+    public static class Mean
     {
         public static Double Compute(List<UInt64> values)
         {

@@ -12,11 +12,11 @@ namespace Generator.Utilities
         {
             Double result = 0.0;
 
-            Double expect = Expectation.Compute(values);
+            Double mean = Mean.Compute(values);
 
             foreach (UInt64 value in values)
             {
-                result += (value - expect) * (value - expect);
+                result += (value - mean) * (value - mean);
             }
 
             return result / values.Count;

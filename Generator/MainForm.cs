@@ -55,11 +55,11 @@ namespace Generator
                 values.Add(generator.Next());
             }
 
-            Double expect = Expectation.Compute(values);
-            Double variate = Variation.Compute(values);
+            Double mean = Mean.Compute(values);
+            Double variation = Variation.Compute(values);
 
-            textBox1.Text = String.Format("{0:e}", expect);
-            textBox2.Text = String.Format("{0:e}", variate);
+            textBox1.Text = String.Format("{0:e}", mean);
+            textBox2.Text = String.Format("{0:e}", variation);
 
             UInt64 m = (UInt64)upDown2.Value;
 
