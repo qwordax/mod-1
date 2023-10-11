@@ -157,7 +157,7 @@ namespace Generator
             chart.Margin = new Padding(0, 0, 0, 0);
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
-            chart.Size = new Size(885, 515);
+            chart.Size = new Size(985, 695);
             chart.TabIndex = 0;
             chart.TabStop = false;
 
@@ -183,10 +183,10 @@ namespace Generator
             // generateButton.
             //
             generateButton.Click += GenerateButtonClick;
-            generateButton.Location = new Point(310, 535);
+            generateButton.Location = new Point(310, 715);
             generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
-            generateButton.Size = new Size(440, 30);
+            generateButton.Size = new Size(490, 30);
             generateButton.TabIndex = 4;
             generateButton.Text = "Generate";
 
@@ -194,10 +194,10 @@ namespace Generator
             // clearButton.
             //
             clearButton.Click += ClearButtonClick;
-            clearButton.Location = new Point(755, 535);
+            clearButton.Location = new Point(805, 715);
             clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
-            clearButton.Size = new Size(440, 30);
+            clearButton.Size = new Size(490, 30);
             clearButton.TabIndex = 5;
             clearButton.Text = "Clear";
 
@@ -426,7 +426,7 @@ namespace Generator
             // MainForm.
             //
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 600);
+            ClientSize = new Size(1300, 750);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
