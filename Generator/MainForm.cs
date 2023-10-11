@@ -74,14 +74,14 @@ namespace Generator
                 chartSeries.Points.AddXY(i, counts[i]);
             }
 
-            checkBox1.Checked = true;
-            checkBox2.Checked = true;
-            checkBox3.Checked = true;
-            checkBox4.Checked = true;
-            checkBox5.Checked = true;
-            checkBox6.Checked = true;
-            checkBox7.Checked = true;
-            checkBox8.Checked = true;
+            testCheckBox1.Checked = true;
+            testCheckBox2.Checked = true;
+            testCheckBox3.Checked = true;
+            testCheckBox4.Checked = true;
+            testCheckBox5.Checked = true;
+            testCheckBox6.Checked = true;
+            testCheckBox7.Checked = true;
+            testCheckBox8.Checked = true;
 
             Text = "Generator — Done!";
         }
@@ -95,14 +95,14 @@ namespace Generator
 
             chartSeries.Points.Clear();
 
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
-            checkBox7.Checked = false;
-            checkBox8.Checked = false;
+            testCheckBox1.Checked = false;
+            testCheckBox2.Checked = false;
+            testCheckBox3.Checked = false;
+            testCheckBox4.Checked = false;
+            testCheckBox5.Checked = false;
+            testCheckBox6.Checked = false;
+            testCheckBox7.Checked = false;
+            testCheckBox8.Checked = false;
         }
     }
 }

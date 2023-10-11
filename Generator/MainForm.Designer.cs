@@ -33,14 +33,14 @@ namespace Generator
         private RadioButton radioButton3;
         private RadioButton radioButton4;
 
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
-        private CheckBox checkBox5;
-        private CheckBox checkBox6;
-        private CheckBox checkBox7;
-        private CheckBox checkBox8;
+        private CheckBox testCheckBox1;
+        private CheckBox testCheckBox2;
+        private CheckBox testCheckBox3;
+        private CheckBox testCheckBox4;
+        private CheckBox testCheckBox5;
+        private CheckBox testCheckBox6;
+        private CheckBox testCheckBox7;
+        private CheckBox testCheckBox8;
 
         private void InitializeComponent()
         {
@@ -71,14 +71,14 @@ namespace Generator
             radioButton3 = new RadioButton();
             radioButton4 = new RadioButton();
 
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox5 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox7 = new CheckBox();
-            checkBox8 = new CheckBox();
+            testCheckBox1 = new CheckBox();
+            testCheckBox2 = new CheckBox();
+            testCheckBox3 = new CheckBox();
+            testCheckBox4 = new CheckBox();
+            testCheckBox5 = new CheckBox();
+            testCheckBox6 = new CheckBox();
+            testCheckBox7 = new CheckBox();
+            testCheckBox8 = new CheckBox();
 
             parameterBox.SuspendLayout();
             generatorBox.SuspendLayout();
@@ -131,14 +131,14 @@ namespace Generator
             //
             testBox.Controls.AddRange(new CheckBox[]
             {
-                checkBox1,
-                checkBox2,
-                checkBox3,
-                checkBox4,
-                checkBox5,
-                checkBox6,
-                checkBox7,
-                checkBox8
+                testCheckBox1,
+                testCheckBox2,
+                testCheckBox3,
+                testCheckBox4,
+                testCheckBox5,
+                testCheckBox6,
+                testCheckBox7,
+                testCheckBox8
             });
 
             testBox.Location = new Point(5, 470);
@@ -335,92 +335,92 @@ namespace Generator
             radioButton4.Text = "LFSR";
 
             //
-            // checkBox1.
+            // testCheckBox1.
             //
-            checkBox1.AutoCheck = false;
-            checkBox1.Location = new Point(5, 25);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(60, 30);
-            checkBox1.TabIndex = 0;
-            checkBox1.TabStop = false;
-            checkBox1.Text = "№ 1";
+            testCheckBox1.AutoCheck = false;
+            testCheckBox1.Location = new Point(5, 25);
+            testCheckBox1.Name = "testCheckBox1";
+            testCheckBox1.Size = new Size(60, 30);
+            testCheckBox1.TabIndex = 0;
+            testCheckBox1.TabStop = false;
+            testCheckBox1.Text = "№ 1";
 
             //
-            // checkBox2.
+            // testCheckBox2.
             //
-            checkBox2.AutoCheck = false;
-            checkBox2.Location = new Point(70, 25);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(60, 30);
-            checkBox2.TabIndex = 0;
-            checkBox2.TabStop = false;
-            checkBox2.Text = "№ 2";
+            testCheckBox2.AutoCheck = false;
+            testCheckBox2.Location = new Point(70, 25);
+            testCheckBox2.Name = "testCheckBox2";
+            testCheckBox2.Size = new Size(60, 30);
+            testCheckBox2.TabIndex = 0;
+            testCheckBox2.TabStop = false;
+            testCheckBox2.Text = "№ 2";
 
             //
-            // checkBox3.
+            // testCheckBox3.
             //
-            checkBox3.AutoCheck = false;
-            checkBox3.Location = new Point(135, 25);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(60, 30);
-            checkBox3.TabIndex = 0;
-            checkBox3.TabStop = false;
-            checkBox3.Text = "№ 3";
+            testCheckBox3.AutoCheck = false;
+            testCheckBox3.Location = new Point(135, 25);
+            testCheckBox3.Name = "testCheckBox3";
+            testCheckBox3.Size = new Size(60, 30);
+            testCheckBox3.TabIndex = 0;
+            testCheckBox3.TabStop = false;
+            testCheckBox3.Text = "№ 3";
 
             //
-            // checkBox4.
+            // testCheckBox4.
             //
-            checkBox4.AutoCheck = false;
-            checkBox4.Location = new Point(200, 25);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(60, 30);
-            checkBox4.TabIndex = 0;
-            checkBox4.TabStop = false;
-            checkBox4.Text = "№ 4";
+            testCheckBox4.AutoCheck = false;
+            testCheckBox4.Location = new Point(200, 25);
+            testCheckBox4.Name = "testCheckBox4";
+            testCheckBox4.Size = new Size(60, 30);
+            testCheckBox4.TabIndex = 0;
+            testCheckBox4.TabStop = false;
+            testCheckBox4.Text = "№ 4";
 
             //
-            // checkBox5.
+            // testCheckBox5.
             //
-            checkBox5.AutoCheck = false;
-            checkBox5.Location = new Point(5, 60);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(60, 30);
-            checkBox5.TabIndex = 0;
-            checkBox5.TabStop = false;
-            checkBox5.Text = "№ 5";
+            testCheckBox5.AutoCheck = false;
+            testCheckBox5.Location = new Point(5, 60);
+            testCheckBox5.Name = "testCheckBox5";
+            testCheckBox5.Size = new Size(60, 30);
+            testCheckBox5.TabIndex = 0;
+            testCheckBox5.TabStop = false;
+            testCheckBox5.Text = "№ 5";
 
             //
-            // checkBox6.
+            // testCheckBox6.
             //
-            checkBox6.AutoCheck = false;
-            checkBox6.Location = new Point(70, 60);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(60, 30);
-            checkBox6.TabIndex = 0;
-            checkBox6.TabStop = false;
-            checkBox6.Text = "№ 6";
+            testCheckBox6.AutoCheck = false;
+            testCheckBox6.Location = new Point(70, 60);
+            testCheckBox6.Name = "testCheckBox6";
+            testCheckBox6.Size = new Size(60, 30);
+            testCheckBox6.TabIndex = 0;
+            testCheckBox6.TabStop = false;
+            testCheckBox6.Text = "№ 6";
 
             //
-            // checkBox7.
+            // testCheckBox7.
             //
-            checkBox7.AutoCheck = false;
-            checkBox7.Location = new Point(135, 60);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(60, 30);
-            checkBox7.TabIndex = 0;
-            checkBox7.TabStop = false;
-            checkBox7.Text = "№ 7";
+            testCheckBox7.AutoCheck = false;
+            testCheckBox7.Location = new Point(135, 60);
+            testCheckBox7.Name = "testCheckBox7";
+            testCheckBox7.Size = new Size(60, 30);
+            testCheckBox7.TabIndex = 0;
+            testCheckBox7.TabStop = false;
+            testCheckBox7.Text = "№ 7";
 
             //
-            // checkBox8.
+            // testCheckBox8.
             //
-            checkBox8.AutoCheck = false;
-            checkBox8.Location = new Point(200, 60);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(60, 30);
-            checkBox8.TabIndex = 0;
-            checkBox8.TabStop = false;
-            checkBox8.Text = "№ 8";
+            testCheckBox8.AutoCheck = false;
+            testCheckBox8.Location = new Point(200, 60);
+            testCheckBox8.Name = "testCheckBox8";
+            testCheckBox8.Size = new Size(60, 30);
+            testCheckBox8.TabIndex = 0;
+            testCheckBox8.TabStop = false;
+            testCheckBox8.Text = "№ 8";
 
             //
             // MainForm.
