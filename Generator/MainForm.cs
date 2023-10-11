@@ -87,21 +87,21 @@ namespace Generator
 
             Text = "Generator — Testing…";
 
-            testCheckBox1.Checked = true;
+            testCheckBox1.Checked = n >= (0x1 << 25);
 
-            testCheckBox2.Checked = true;
+            testCheckBox2.Checked = n >= (0x1 << 25);
 
-            testCheckBox3.Checked = true;
+            testCheckBox3.Checked = n >= (0x1 << 25);
 
-            testCheckBox4.Checked = true;
+            testCheckBox4.Checked = n >= (0x1 << 25);
 
-            testCheckBox5.Checked = true;
+            testCheckBox5.Checked = n >= (0x1 << 25);
 
-            testCheckBox6.Checked = true;
+            testCheckBox6.Checked = n >= (0x1 << 25);
 
-            testCheckBox7.Checked = true;
+            testCheckBox7.Checked = n >= (0x1 << 25);
 
-            testCheckBox8.Checked = true;
+            testCheckBox8.Checked = n >= (0x1 << 25);
 
             Text = "Generator — Done!";
         }
