@@ -274,11 +274,11 @@ namespace Generator
             //
             // parameterUpDown1.
             //
-            parameterUpDown1.Location = new Point(70, 25);
+            parameterUpDown1.Location = new Point(100, 25);
             parameterUpDown1.Maximum = 100_000_000;
             parameterUpDown1.Minimum = 100;
             parameterUpDown1.Name = "parameterUpDown1";
-            parameterUpDown1.Size = new Size(225, 30);
+            parameterUpDown1.Size = new Size(195, 30);
             parameterUpDown1.TextAlign = HorizontalAlignment.Right;
             parameterUpDown1.UpDownAlign = LeftRightAlignment.Left;
 
@@ -287,11 +287,11 @@ namespace Generator
             //
             // parameterUpDown2.
             //
-            parameterUpDown2.Location = new Point(70, 60);
+            parameterUpDown2.Location = new Point(100, 60);
             parameterUpDown2.Maximum = 1_000;
             parameterUpDown2.Minimum = 10;
             parameterUpDown2.Name = "parameterUpDown2";
-            parameterUpDown2.Size = new Size(225, 30);
+            parameterUpDown2.Size = new Size(195, 30);
             parameterUpDown2.TextAlign = HorizontalAlignment.Right;
             parameterUpDown2.UpDownAlign = LeftRightAlignment.Left;
 
@@ -320,20 +320,20 @@ namespace Generator
             //
             // expectedTextBox1.
             //
-            expectedTextBox1.Location = new Point(70, 25);
+            expectedTextBox1.Location = new Point(100, 25);
             expectedTextBox1.Name = "expectedTextBox1";
             expectedTextBox1.ReadOnly = true;
-            expectedTextBox1.Size = new Size(225, 30);
+            expectedTextBox1.Size = new Size(195, 30);
             expectedTextBox1.TabStop = false;
             expectedTextBox1.TextAlign = HorizontalAlignment.Right;
 
             //
             // expectedTextBox2.
             //
-            expectedTextBox2.Location = new Point(70, 60);
+            expectedTextBox2.Location = new Point(100, 60);
             expectedTextBox2.Name = "expectedTextBox2";
             expectedTextBox2.ReadOnly = true;
-            expectedTextBox2.Size = new Size(225, 30);
+            expectedTextBox2.Size = new Size(195, 30);
             expectedTextBox2.TabStop = false;
             expectedTextBox2.TextAlign = HorizontalAlignment.Right;
 
@@ -360,20 +360,20 @@ namespace Generator
             //
             // computedTextBox1.
             //
-            computedTextBox1.Location = new Point(70, 25);
+            computedTextBox1.Location = new Point(100, 25);
             computedTextBox1.Name = "computedTextBox1";
             computedTextBox1.ReadOnly = true;
-            computedTextBox1.Size = new Size(225, 30);
+            computedTextBox1.Size = new Size(195, 30);
             computedTextBox1.TabStop = false;
             computedTextBox1.TextAlign = HorizontalAlignment.Right;
 
             //
             // computedTextBox2.
             //
-            computedTextBox2.Location = new Point(70, 60);
+            computedTextBox2.Location = new Point(100, 60);
             computedTextBox2.Name = "computedTextBox2";
             computedTextBox2.ReadOnly = true;
-            computedTextBox2.Size = new Size(225, 30);
+            computedTextBox2.Size = new Size(195, 30);
             computedTextBox2.TabStop = false;
             computedTextBox2.TextAlign = HorizontalAlignment.Right;
 
