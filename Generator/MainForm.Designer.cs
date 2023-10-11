@@ -273,7 +273,7 @@ namespace Generator
             upDown2.Name = "upDown2";
             upDown2.Size = new Size(225, 30);
 
-            upDown2.Value = 100;
+            upDown2.Value = 256;
 
             //
             // textBox1.
