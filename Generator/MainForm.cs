@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+using TrulyRandom;
+
 using Generator.Algorithms;
 using Generator.Utilities;
 
@@ -85,23 +87,52 @@ namespace Generator
                 chartSeries.Points.AddXY(i, counts[i]);
             }
 
-            Text = "Generator — Testing…";
+            List<Byte> bytes = new List<Byte>();
 
-            testCheckBox1.Checked = n >= (0x1 << 25);
+            foreach (UInt64 value in values)
+            {
+                bytes.AddRange(BitConverter.GetBytes(value));
+            }
 
-            testCheckBox2.Checked = n >= (0x1 << 25);
+            Text = "Generator — Testing ¹ 1…";
 
-            testCheckBox3.Checked = n >= (0x1 << 25);
+            testCheckBox1.Checked = n >= (0x1 << 25) ||
+                NistTests.Frequency(bytes.ToArray()).PValues[0] >= 0.01;
 
-            testCheckBox4.Checked = n >= (0x1 << 25);
+            Text = "Generator — Testing ¹ 2…";
 
-            testCheckBox5.Checked = n >= (0x1 << 25);
+            testCheckBox2.Checked = n >= (0x1 << 25) ||
+                NistTests.BlockFrequency(bytes.ToArray(), 128).PValues[0] >= 0.01;
 
-            testCheckBox6.Checked = n >= (0x1 << 25);
+            Text = "Generator — Testing ¹ 3…";
 
-            testCheckBox7.Checked = n >= (0x1 << 25);
+            testCheckBox3.Checked = n >= (0x1 << 25) ||
+                NistTests.Runs(bytes.ToArray()).PValues[0] >= 0.01;
 
-            testCheckBox8.Checked = n >= (0x1 << 25);
+            Text = "Generator — Testing ¹ 4…";
+
+            testCheckBox4.Checked = n >= (0x1 << 25) ||
+                NistTests.LongestRunOfOnes(bytes.ToArray()).PValues[0] >= 0.01;
+
+            Text = "Generator — Testing ¹ 5…";
+
+            testCheckBox5.Checked = n >= (0x1 << 25) ||
+                NistTests.BinaryMatrixRank(bytes.ToArray(), -1).PValues[0] >= 0.01;
+
+            Text = "Generator — Testing ¹ 6…";
+
+            testCheckBox6.Checked = n >= (0x1 << 25) ||
+                NistTests.DiscreteFourierTransform(bytes.ToArray()).PValues[0] >= 0.01;
+
+            Text = "Generator — Testing ¹ 7…";
+
+            testCheckBox7.Checked = n >= (0x1 << 25) ||
+                NistTests.NonOverlappingTemplateMatchings(bytes.ToArray(), -1, -1).PValues[0] >= 0.01;
+
+            Text = "Generator — Testing ¹ 8…";
+
+            testCheckBox8.Checked = n >= (0x1 << 25) ||
+                NistTests.OverlappingTemplateMatchings(bytes.ToArray(), -1, -1, -1).PValues[0] >= 0.01;
 
             Text = "Generator — Done!";
         }
