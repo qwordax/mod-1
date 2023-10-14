@@ -37,7 +37,7 @@ namespace Generator
             if (generatorButton2.Checked)
             {
                 generator = new Lehmer(a: 36_786_549,
-                    m: UInt64.MaxValue - 1_576,
+                    m: UInt64.MaxValue - 1_999,
                     x: 5_542_985_019_385);
             }
 
